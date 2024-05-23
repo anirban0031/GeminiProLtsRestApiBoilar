@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 
 description = {
-    'Language-Model': 'gemini-1.5-pro-latest',
+    'Language-Model': 'gemini-1.5-pro-latest or gemini-1.5-flash-latest',
     'version': 'v1beta',
     'language': 'python (flask)',
     'routes': ['/top10movies'],
@@ -48,7 +48,7 @@ def call_api():
     prompt = f"Follow JSON schema.<JSONSchema>{json.dumps(jsonSchema)}</JSONSchema>"
     genai.configure(api_key=apiKey)
     model = genai.GenerativeModel(
-        model_name="gemini-1.5-pro-latest",
+        model_name="gemini-1.5-pro-latest", # or use gemini-1.5-flash-latest
         generation_config=glm.GenerationConfig(response_mime_type="application/json"),
     )
     response = model.generate_content(prompt)
