@@ -59,14 +59,6 @@ def call_api():
     print(response.text)
     getjsonformate=json.loads(getText)
     
-    # if type(getText) is list:
-    #     print("ïts showing array")
-    #     getjsonformate=json.loads(getText)
-
-    #     return getjsonformate
-    # else:
-    #     print("ïts showing text___________")
-    
     return getjsonformate
         
         
