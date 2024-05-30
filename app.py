@@ -10,6 +10,7 @@ app = Flask(__name__)
 description = {
     'Language-Model': 'gemini-1.5-pro-latest or gemini-1.5-flash-latest',
     'version': 'v1beta',
+    'packages': ['google-ai-generativelanguage==0.6.2','google-generativeai==0.5.2'],
     'language': 'python (flask)',
     'routes': ['/top10movies'],
     'comment': 'language model response time not reliable but right now response type json configurable'
